@@ -1,50 +1,48 @@
-# Welcome to your Expo app 👋
+# React Native Starter
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A minimal React Native starter template designed to help you get comfortable using an AI agent to build mobile apps. Make changes, see them live, and learn by doing.
 
-## Get started
+## Getting Started
 
-1. Install dependencies
-
-   ```bash
-   npm install
-   ```
-
-2. Start the app
-
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+Install dependencies:
 
 ```bash
-npm run reset-project
+npm install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Start the development server:
 
-## Learn more
+```bash
+npx expo start
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+This will open the Expo developer tools. From there you can run the app on:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+- Your physical device using [Expo Go](https://expo.dev/go)
+- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
+- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
 
-## Join the community
+## Project Structure
 
-Join our community of developers creating universal apps.
+```
+app/
+  (tabs)/
+    _layout.tsx    # Tab navigation setup
+    index.tsx      # Home screen
+    profile.tsx    # Profile screen
+lib/
+  theme.ts         # Colors, typography, spacing
+assets/
+  images/          # App images
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## Using with an AI Agent
+
+This template is intentionally simple. Ask your AI agent to:
+
+- Add new screens or components
+- Change colors or styling in `lib/theme.ts`
+- Add new tabs to the navigation
+- Integrate APIs or add features
+
+Watch your changes appear live as you iterate. This is a playground—experiment freely.
