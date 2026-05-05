@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
+import { SQLiteProvider } from "expo-sqlite";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import {
   InstrumentSerif_400Regular,
@@ -12,6 +13,7 @@ import {
   Inter_600SemiBold,
   useFonts,
 } from "@expo-google-fonts/inter";
+import { DATABASE_NAME, migrateDb } from "@/lib/db";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -34,7 +36,9 @@ export default function RootLayout() {
 
   return (
     <SafeAreaProvider>
-      <Stack screenOptions={{ headerShown: false }} />
+      <SQLiteProvider databaseName={DATABASE_NAME} onInit={migrateDb}>
+        <Stack screenOptions={{ headerShown: false }} />
+      </SQLiteProvider>
     </SafeAreaProvider>
   );
 }
