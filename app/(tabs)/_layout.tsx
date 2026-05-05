@@ -1,12 +1,23 @@
-import { Tabs } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
-import { colors } from "@/lib/theme";
+import { Tabs } from "expo-router";
+import { colors, fonts } from "@/lib/theme";
 
 export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: colors.primary,
+        tabBarInactiveTintColor: colors.onSurfaceVariant,
+        tabBarLabelStyle: {
+          fontFamily: fonts.sansSemibold,
+          fontSize: 11,
+          letterSpacing: 0.5,
+          textTransform: "uppercase",
+        },
+        tabBarStyle: {
+          backgroundColor: colors.surfaceContainerLowest,
+          borderTopColor: colors.outlineVariant,
+        },
         headerShown: false,
       }}
     >
@@ -15,7 +26,7 @@ export default function TabLayout() {
         options={{
           title: "Home",
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="home" size={size} color={color} />
+            <Ionicons name="home-outline" size={size} color={color} />
           ),
         }}
       />
@@ -24,7 +35,7 @@ export default function TabLayout() {
         options={{
           title: "Profile",
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="person" size={size} color={color} />
+            <Ionicons name="person-outline" size={size} color={color} />
           ),
         }}
       />
